@@ -7,7 +7,7 @@ const app = express();
 const PORT = 8001;
 app.use(express.json())
 app.use(cors())
-mdb.connect("mongodb://localhost:27017/seceDec2025").then(() => console.log("MongoDB connection successful")).catch((err) => console.log("mangodb connection unsuccessful,err"))
+mdb.connect("mongodb+srv://NethraDB:Nethra%40123@cybersec.p8x2juk.mongodb.net/?appName=CyberSec").then(() => console.log("MongoDB connection successful")).catch((err) => console.log("mangodb connection unsuccessful,err"))
 app.get('/', (req, res) => {
     res.send("Welcome to backend server")
 
