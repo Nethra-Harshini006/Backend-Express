@@ -12,6 +12,12 @@ app.get('/', (req, res) => {
     res.send("Welcome to backend server")
 
 })
+
+app.get('/getallsignup',(req,res)=>{
+    const signup = Signup.find();
+    res.json(signup);
+})
+
 app.get('/json', (req, res) => {
     res.json({
         "college": "sece",
