@@ -13,9 +13,10 @@ app.get('/', (req, res) => {
 
 })
 
-app.get('/getallsignup',(req,res)=>{
-    const signup = Signup.find();
-    res.json(signup);
+app.get('/getallsignup',async(req,res)=>{
+    const signup = await Signup.find();
+    console.log(signup);
+    res.send("Data fetched");
 })
 
 app.get('/json', (req, res) => {
